@@ -13,7 +13,7 @@ public class InstructionScreen extends World
      * Constructor for objects of class InstructionScreen.
      * 
      */
-    public InstructionScreen()
+    public InstructionScreen(MenuScreen menu)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
