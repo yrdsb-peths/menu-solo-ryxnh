@@ -16,8 +16,9 @@ public class Label extends Actor
     private String value;
     private int fontSize;
     private Color lineColor = Color.BLACK;
-    private Color fillColor = Color.WHITE;
-    private String text;
+    private Color fillColor = Color.BLACK;
+    private String text; 
+    
     private static final Color transparent = new Color(0,0,0,0);
 
     
@@ -83,7 +84,13 @@ public class Label extends Actor
         updateImage();
     }
     
-
+    public void setText(String text)
+    {
+        this.text = text;
+        updateImage();
+    }
+    
+    
     /**
      * Update the image on screen to show the current value.
      */
@@ -91,12 +98,4 @@ public class Label extends Actor
     {
         setImage(new GreenfootImage(value, fontSize, fillColor, transparent, lineColor));
     }
-    
-    
-    public void setText(String text)
-    {
-        this.text = text;
-        updateImage();
-    }
-
 }
