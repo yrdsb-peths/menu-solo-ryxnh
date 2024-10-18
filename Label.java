@@ -28,6 +28,7 @@ public class Label extends Actor
     public Label(int value, int fontSize)
     {
         this(Integer.toString(value), fontSize);
+        updateImage(); 
     }
     
     /**
@@ -86,7 +87,7 @@ public class Label extends Actor
     
     public void setText(String text)
     {
-        this.text = text;
+        this.value = text;
         updateImage();
     }
     
@@ -97,5 +98,6 @@ public class Label extends Actor
     private void updateImage()
     {
         setImage(new GreenfootImage(value, fontSize, fillColor, transparent, lineColor));
+        
     }
 }
