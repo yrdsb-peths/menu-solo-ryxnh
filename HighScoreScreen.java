@@ -2,12 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.Map;
 import java.util.HashMap;
 
-/**
- * Write a description of class HighScoreScreen here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class HighScoreScreen extends World
 {
     private Map<String, Integer > highScores;
