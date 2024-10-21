@@ -38,7 +38,7 @@ public class HighScoreScreen extends World
             String playerName = entry.getKey();
             int score = entry.getValue();
             
-            Label scoreLabel = new Label (playerName + ":" + score, 15);
+            Label scoreLabel = new Label (playerName + ": " + score, 30);
             addObject(scoreLabel, xPos, yPos); 
             
             yPos += 50; 

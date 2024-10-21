@@ -19,6 +19,7 @@ public class MenuScreen extends World {
         avatarActor = new Avatar (avatars.peek());
         addObject(avatarActor, getWidth()/ 2, getHeight()/ 2); 
         
+        addObject(new Button(this::goHighScore, "High score screen"), 300, 380);
         addObject(new Button(this::goInstructions, "Instructions"), 300, 340);
         addObject(new Button(this::cycleAvatar, "Next Avatar"), 300, 300);
     }
@@ -29,6 +30,11 @@ public class MenuScreen extends World {
         Greenfoot.setWorld(new InstructionScreen(this));
     }
     
+    //method to swithc to HighScoreScreen
+    public void goHighScore()
+    {
+        Greenfoot.setWorld(new HighScoreScreen());
+    }
     
     // cycle through the avatars in the queue
     public void cycleAvatar() {
