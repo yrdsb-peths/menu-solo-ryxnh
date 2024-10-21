@@ -8,7 +8,7 @@ public class MenuScreen extends World {
         super(600, 400, 1);
     
         //linked list for the images of the avatar
-         avatars = new Queue<>();
+        avatars = new Queue<>();
         avatars.enqueue(new GreenfootImage("face_a.png"));
         avatars.enqueue(new GreenfootImage("face_b.png"));
         avatars.enqueue(new GreenfootImage("face_c.png"));

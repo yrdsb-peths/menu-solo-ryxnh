@@ -1,6 +1,7 @@
 import greenfoot.*;
 
 public class InstructionScreen extends World {
+    private Stack navigationStack; // stack for history 
     private MenuScreen menu; //reference to MenuScreen
     private String[] instructions; //array for instructiontext
     private int index;//index for instruction
@@ -9,6 +10,8 @@ public class InstructionScreen extends World {
     public InstructionScreen(MenuScreen menu) {
         super(600, 400, 1);
         this.menu = menu;
+        this.navigationStack = new Stack();
+        
         
         instructions = new String[]{
             "Use <Next Avatar> to cycle."," press <High Score Screen> to view high scores.","Press <Back to Menu> to exit."
@@ -45,6 +48,7 @@ public class InstructionScreen extends World {
     
     //method for returning to MenuScreen
     public void goBack() {
+        navigationStack.push("InstructionScreen");
         Greenfoot.setWorld(menu);
     }
 }
