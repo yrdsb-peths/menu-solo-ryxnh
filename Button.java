@@ -11,28 +11,27 @@ public class Button extends Actor {
         this.labelText = labelText;
 
 
-        // Load the button image
+        //Load the button image
         GreenfootImage buttonImage = new GreenfootImage("images/buttonLong_beige.png");
 
 
-        // Create a new image to combine the button and the label
+        //combine the button and the label
         GreenfootImage combinedImage = new GreenfootImage(buttonImage);
 
 
-        // Set text properties: color, font size
         combinedImage.setColor(Color.BLACK);
         combinedImage.setFont(new Font("Arial", true, false, 15)); // Adjust the font size
 
 
-        // Draw the label text on top of the button image (centered)
+        //draw and center the combined image
         combinedImage.drawString(labelText, ( buttonImage.getWidth() / 2) - 40 , buttonImage.getHeight() / 2);
 
 
-        // Set the combined image as the actor's image
+        // Set combined image as the actor's image
         setImage(combinedImage);
     }
 
-
+    //check if user clicked on (this) obeject. 
     public void act() {
         if (Greenfoot.mouseClicked(this)) {
             if (action != null) {
