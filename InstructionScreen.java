@@ -11,7 +11,7 @@ public class InstructionScreen extends World {
         this.menu = menu;
         
         instructions = new String[]{
-            "Welcome.","Use arrow keys to move.","Press <space> to jump."
+            "Use <Next Avatar> to cycle."," press <High Score Screen> to view high scores.","Press <Back to Menu> to exit."
         };
         
         index = 0; //first Instruction
