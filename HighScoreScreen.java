@@ -7,7 +7,6 @@ public class HighScoreScreen extends World
 {
     private Map<String, Integer > highScores;
     
-    
     /**
      * Constructor for objects of class HighScoreScreen.
      * 
